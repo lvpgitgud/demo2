@@ -18,13 +18,13 @@ export class WindTurbine {
         this.scene = scene;
         for (let i = 0; i < 2; i++) {
             this.turbinePositions.push(
-                new THREE.Vector3(5, 8.2, 8 + 5 * i) //collumn 1
+                new THREE.Vector3(5, 8.2, 8 + 5 * i*-5) //collumn 1
             );
         }
 
         for (let i = 2; i < 4; i++) {
             this.turbinePositions.push(
-                new THREE.Vector3(13, 8.2, 8 + 5 * (3 - i)) //collum 2
+                new THREE.Vector3(13, 8.2, 8 + 5 * (3 - i)*-5) //collum 2
             );
         }
 
