@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bess-sim</title>
+
+    <link rel="stylesheet" href="/src/view/style.css" />
+  </head>
+
+  <body>
+    <div id="renderer-wrapper">
+      <div id="renderer-container"></div>
+
+      <!-- HUD -->
+      <div id="hud">
+
+        <!-- TOP BAR -->
+        <div id="hudToggle">
+          <span>Energy SCADA</span>
+          <button id="toggleHud">▴</button>
+        </div>
+
+        <!-- PANEL -->
+        <div id="hudPanel">
+
+          <!-- TIME -->
+          <div class="panel">
+            <div class="panel-title">Time Control</div>
+
+            <div class="time-row">
+              <div id="currentDay"></div>
+              <div id="simTime"></div>
+            </div>
+
+            <input id="timeSlider" type="range" min="0" max="1" step="0.001" />
+          </div>
+
+          <!-- BESS -->
+          <div class="panel">
+            <div class="panel-title">BESS Dispatch</div>
+
+            <table id="dayTable">
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <!-- PV -->
+          <div class="panel">
+            <div class="panel-title">PV System</div>
+
+            <table id="pvTable">
+              <thead>
+                <tr>
+                  <td>Irradiance</td>
+                  <td>Temp</td>
+                  <td>Power</td>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <!-- CONTROLS -->
+          <div class="panel">
+            <div class="panel-title">Playback</div>
+
+            <div class="hud-footer">
+              <button id="prevDay">←</button>
+              <button id="play">▶</button>
+              <button id="pause">⏸</button>
+              <button id="reset">⟲</button>
+              <button id="nextDay">→</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
